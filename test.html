@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Css Layout</title>
+    <link rel="stylesheet" href="css\style.css">
+    <style>
+       .box{
+          border-width: 1px;
+          border-style: solid;
+          border-color: red;
+       }
+       .box1{
+          width: 200px;
+          height: 200px;
+          border:1px solid blue;
+          background-color: yellow;
+          font-size: 32px;
+          font-weight: bold;
+          font-style: italic;
+          text-align: center;
+          line-height: 200px;
+          padding-right: 20px;
+          margin-right: 20px;
+          box-sizing: border-box;
+          /*float:right;*/
+          position: relative;
+          top:200px;
+          left:100px;
+       }
+
+       .box1::after{
+          clear: both;
+          content: "";
+          display: block;
+
+       }
+    </style>
+</head>
+<body>
+    <p id="demo" class="box">Lorem, ipsum dolor.</p>
+    <p class="box">Sapiente, consequatur illum.</p>
+    <p class="test box">Eius, maxime sequi.</p>
+    <span class="box">Lorem, ipsum dolor.</span>
+    <span class="box">Lorem, ipsum dolor.</span>
+    <span class="box">Lorem, ipsum dolor.</span>
+    <div class="box1">
+       Box 01
+    </div>
+    <!-- <div style="clear: both;"></div> -->
+</body>
+</html>

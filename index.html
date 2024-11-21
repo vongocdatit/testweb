@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo Layout</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		*{margin: 0px;padding:0px;}
+        
+		.wrap{
+          width: 980px;
+          /*border:1px solid blue;*/
+          margin:0 auto;
+		}
+
+		.header{
+		  height: 140px;
+		  /*border:1px solid blue;*/
+		  background-color: lightskyblue;	
+		  position:relative;
+		  display: flex;
+		  align-items: flex-end;
+		  justify-content: flex-start;
+		}
+
+		img.logo1{
+          position: absolute;
+          top:0px;
+          right: 0px;
+		    width: 350px;
+		}
+
+		img.logo2{
+          width: 350px;
+		}
+
+		.navigation{
+		   height: 40px;
+		   /*border:1px solid blue;	*/
+		   background-color: lightskyblue;
+		   margin:7px 0px;	
+		}
+		 
+		li{list-style: none}
+
+      /*Menu level 1*/
+		ul.level1 li {
+			float:left;
+			padding: 9px 28px;
+			border-right: 1px dotted #848484;
+			/* Menu level 2 */
+			position: relative;
+		}
+		
+		ul.level1 li:last-child{
+			border-right: none
+		}
+
+		.navigation a {
+         text-decoration: none;
+         font-size:18px; 
+         color:#000000;
+         font-weight: bold;
+      }
+
+      .navigation ul li:hover{
+         background: #43626C; 
+         transition: all 0.25s
+      }
+        
+      /* menu level 2 */
+      ul.level1 li>ul{
+         display: none;
+         position: absolute; 
+         background:#328AA5; 
+         top:39px; 
+         width:200px; 
+         left:0px;
+      }
+
+      ul.level1 li:hover>ul{
+         display: block;
+      }
+      
+      ul.level1 li>ul li{
+         padding: 5px 10px; 
+         border-bottom: 1px dotted #A4A4A4;
+         border-right: none;
+         width: 180px;
+         /*Menu level 3*/
+         position:relative;
+      }
+      
+      /*Menu level 3*/
+      ul.level2 li>ul{
+         top:0px; 
+         left:200px;
+      }
+
+		.sidebar{
+			width:270px;
+			/* height: 450px; */
+			float:left;
+			/*border:1px solid blue;	*/
+         /* background-color: lightskyblue; */
+         display:flex;
+         justify-content: center;
+      }
+      
+      .sidebar ul {
+         width: 190px;
+      }
+
+      .sidebar ul li:first-child{
+         margin:25px 0px;
+         margin-left:-10px;
+      }
+
+      #username{
+         margin:10px 0px;
+         border-radius: 5px;
+         border-collapse: collapse;
+         font-size: 15px;
+         border:1px solid gray;
+      }
+
+      #password{
+         margin-bottom: 10px;
+         border-radius: 5px;
+         font-size: 15px;
+         border-collapse: collapse;
+         border:1px solid gray;
+      }
+
+      #login{
+         background-color: #0967B1;
+         color:white;
+         padding:7px;
+         font-weight: bold;
+         border-radius: 5px;
+         border-collapse: collapse;
+         border:1px solid gray;
+      }
+
+      #frmlogin{
+         border:2px dashed gray;
+         padding:15px;
+         margin-right: -20px;
+         border-radius: 20px;
+      }
+
+      .sidebar ul li{
+         margin-bottom:20px;
+      }
+
+      .sidebar ul li img{
+         width: 200px;
+         height: 80px;
+      }
+
+		.content{
+			width:690px;
+			/* height: 450px; */
+			float:right;
+			/*border:1px solid blue;	*/
+			/*background-color: lightblue;	*/
+		}
+
+		.article{
+            margin:7px 0px;
+            margin-right: 15px;
+            text-align: justify;
+            border-bottom:2px dashed black;
+            padding-bottom: 70px;
+		}
+
+		.article h2{
+			margin-bottom: 5px;
+		}
+
+      /*Note: tag img -> display:inline-block*/
+		.article img{
+			width: 150px;
+			float:left;
+		}
+
+		.no-border{
+			border:none;
+		}
+
+		.clear{
+			clear:both;
+		}
+
+		.footer{
+			height: 70px;
+			/*border:1px solid blue;*/
+			background-color: lightskyblue;		
+			/* margin-top: 15px; */
+			line-height: 70px;
+			text-align: center;
+      }
+      
+      /*Note: tag form -> display:block| tags input:inline-block*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<img class="logo1" src="images/logo5.jpg" alt="">
+		    <img class="logo2" src="images/logo5.jpg" alt="">
+		</div><!--.header-->
+        <div class="navigation">
+        	<ul class="level1">
+				<li><a href="#"><img src="images/Home.gif" alt=""></a></li>
+				<li><a href="#">Sản phẩm</a>
+				   <ul class="level2">
+					  <li><a href="">Camera quan sát</a></li>
+					  <li><a href="">Tai nghe điện thoại</a></li>
+					  <li><a href="">Thiết bị ghi âm</a></li>
+					  <li><a href="">Máy tính bảng</a></li>
+					  <li><a href="">Thiết bị văn phòng</a></li>
+				   </ul>
+				</li>
+				<li><a href="">Giỏ hàng</a></li>
+				<li><a href="">Bảo hành</a>
+				   <ul class="level2">
+					  <li><a href="">Bảo hành 1</a></li>
+					  <li><a href="">Bảo hành 2</a></li>
+                 <li><a href="">Bảo hành 3</a>
+                     <ul>
+                        <li><a href="">Bảo hành 3.1</a></li>
+                        <li><a href="">Bảo hành 3.2</a></li>
+                        <li><a href="">Bảo hành 3.3</a></li>
+                        <li><a href="">Bảo hành 3.4</a></li>
+                        <li><a href="">Bảo hành 3.5</a></li>
+                     </ul>
+                 </li>
+					  <li><a href="">Bảo hành 4</a></li>
+					  <li><a href="">Bảo hành 5</a></li>
+				   </ul>
+				</li>
+				<li><a href="#">Dịch vụ</a></li>
+				<li><a href="#">Liên hệ</a></li>
+			 </ul>
+			 <div class="clear"></div>
+        </div><!--.navigation-->
+        <div class="sidebar">
+        	   <ul>
+                <li>
+                  <form id="frmlogin">
+                     <h3>Đăng nhập</h3>
+                     <input type="text" name="username" id="username">
+                     <input type="password" name="password" id="password">
+                     <input type="submit" value="Đăng nhập" name="login" id="login">
+                  </form>
+                </li>
+                <li><img src="images/togiactoipham.jpg" alt=""></li>
+                <li><img src="images/togiactoipham.jpg" alt=""></li>
+                <li><img src="images/togiactoipham.jpg" alt=""></li>
+                <li><img src="images/togiactoipham.jpg" alt=""></li>
+            </ul>
+        </div><!--.sidebar-->
+        <div class="content">
+        	<h1>Tin Tức & Sự Kiện</h1>
+            <div class="article">
+            	<h2>Sangsung trình làng smartphone trong năm nay</h2>
+            	<img src="images/picture.jpg" alt="">
+            	Mười năm xây dựng và phát triển với một sản phẩm lớn không hẳn là một chặng đường quá dài thế nhưng nó cũng đủ để Facebook có thể để lại những thay đổi to lớn và sâu sắc lên cuộc sống không ít người. Theo quy định, thuế Thu nhập cá nhân (TNCN) là loại thuế ... những người có thu nhập cao, bao gồm công dân Việt Nam.
+            </div>
+            <div class="article">
+            	<h2>Sangsung trình làng smartphone trong năm nay</h2>
+            	<img src="images/picture.jpg" alt="">
+            	Mười năm xây dựng và phát triển với một sản phẩm lớn không hẳn là một chặng đường quá dài thế nhưng nó cũng đủ để Facebook có thể để lại những thay đổi to lớn và sâu sắc lên cuộc sống không ít người. Theo quy định, thuế Thu nhập cá nhân (TNCN) là loại thuế ... những người có thu nhập cao, bao gồm công dân Việt Nam.
+            </div>
+            <div class="article no-border">
+            	<h2>Sangsung trình làng smartphone trong năm nay</h2>
+            	<img src="images/picture.jpg" alt="">
+            	Mười năm xây dựng và phát triển với một sản phẩm lớn không hẳn là một chặng đường quá dài thế nhưng nó cũng đủ để Facebook có thể để lại những thay đổi to lớn và sâu sắc lên cuộc sống không ít người. Theo quy định, thuế Thu nhập cá nhân (TNCN) là loại thuế ... những người có thu nhập cao, bao gồm công dân Việt Nam.
+            </div>
+        </div><!--.content-->
+        <div class="clear"></div>
+        <div class="footer">
+        	@Copyright: ABC Computer.
+        </div><!--.footer-->
+	</div>
+</body>
+</html>
